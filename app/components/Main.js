@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, } from 'react-native';
-import Note from '/Note';
+import Note from './Note';
 
 
 export default class Main extends React.Component {
@@ -15,10 +15,9 @@ export default class Main extends React.Component {
 
   render() {
 
-    Let notes = this.state.noteArray.map((val,key) => {
-      return <Note key={key} keyval={key} val={val}
-            deleteMethod={ ()=> this.deleteNote(key) } />
-    });
+    let notes = this.state.noteArray.map((val, key) => {
+      return <Note key={key} keyval={key} val={val} deleteMethod={ () => this.deleteNote(key)} />
+  });
 
     return (
       <View style={styles.container} >

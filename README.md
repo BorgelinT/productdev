@@ -1,6 +1,8 @@
-# productdev
-Group project for school
+###### KAITSEN
 
+### Change for good
+
+This app is being developed for a product developement course in TUAS
 
 
 

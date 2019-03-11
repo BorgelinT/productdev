@@ -4,7 +4,7 @@ Group project for school
 
 
 
-Installation:
+#### Installation:
 
-$ npm install --save expo-cli react-native-calendars
-$ npm install
+```$ npm install --save expo-cli react-native-calendars```
+```$ npm install```

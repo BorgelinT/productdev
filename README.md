@@ -1,6 +1,6 @@
-###### KAITSEN
+# Kaitsen
 
-### Change for good
+### Small steps to change your life
 
 This app is being developed for a product developement course in TUAS
 

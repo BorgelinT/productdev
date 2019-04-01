@@ -5,7 +5,7 @@ import AppNavigator from './navigation/AppNavigator';
 
 export default class App extends React.Component {
   state = {
-    isLoadingComplete: false,
+    isLoadingComplete: false
   };
 
   render() {
@@ -34,7 +34,7 @@ export default class App extends React.Component {
         require('./assets/images/robot-prod.png'),
       ]),
       Font.loadAsync({
-        ...Icon.Ionicons.font,
+        'glades': require('./assets/fonts/GLADES-DEMO.ttf')
       }),
     ]);
   };
@@ -53,6 +53,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    /* backgroundColor: '#fff', */
   },
 });

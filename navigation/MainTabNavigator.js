@@ -13,6 +13,11 @@ const HomeStack = createStackNavigator({
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
+  tabBarOptions: {
+    style: {
+      backgroundColor: '#FA8072'
+    }
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -31,6 +36,11 @@ const CalendarStack = createStackNavigator({
 
 CalendarStack.navigationOptions = {
   tabBarLabel: 'Calendar',
+  tabBarOptions: {
+    style: {
+      backgroundColor: '#FA8072'
+    }
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -45,6 +55,11 @@ const NotesStack = createStackNavigator({
 
 NotesStack.navigationOptions = {
   tabBarLabel: 'Notes',
+  tabBarOptions: {
+    style: {
+      backgroundColor: '#FA8072'
+    }
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

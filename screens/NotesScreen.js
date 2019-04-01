@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TextInput, Button, ListView } from 'react-native';
+import { Text, View, StyleSheet, TextInput, Button, ListView, ImageBackground } from 'react-native';
 import { Constants } from 'expo';
 
 export default class NotesScreen extends React.Component {
   static navigationOptions = {
     title: 'Notes',
+    headerStyle: {
+      backgroundColor: '#FA8072',
+    },
+    headerTitleStyle: {
+      fontSize: 40,
+      fontWeight: '200',
+      fontFamily: 'glades',
+      color: '#fffff0'
+    },
   };
 
   constructor(props) {
@@ -45,13 +54,14 @@ export default class NotesScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ImageBackground source={require('../assets/images/kaitsenbackground.png')} style={styles.container}>
         <View style={styles.formView}>
           <TextInput
             style={styles.inputForm}
             value={this.state.inputValue}
             onChangeText={this._handleTextChange}
             placeholder="New task"
+            maxLength={30}
           />
           <Button
             title="Add"
@@ -71,14 +81,14 @@ export default class NotesScreen extends React.Component {
                 <Text style={styles.todoText}>{rowData}</Text>
                 <Button
                   title="Delete"
-                  onPress={handleDelete}  
+                  onPress={handleDelete}
                 />
               </View>
               );
             }
           }
         />
-      </View>
+      </ImageBackground>
     );
   }
 }

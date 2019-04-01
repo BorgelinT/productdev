@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, ImageBackground} from 'react-native';
 
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',

@@ -20,7 +20,8 @@
     "react-native-customize-selected-date": "^1.0.1",
     "react-native-events-calendar": "^1.0.8",
     "react-native-vector-icons": "^6.3.0",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^3.0.9",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",

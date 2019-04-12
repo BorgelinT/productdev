@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { AppLoading, Asset, Font, Icon } from 'expo';
+import { AppLoading, Asset, Font,} from 'expo';
 import AppNavigator from './navigation/AppNavigator';
 
 export default class App extends React.Component {
@@ -37,12 +37,6 @@ export default class App extends React.Component {
     ]);
   };
 
-  _handleLoadingError = error => {
-    // In this case, you might want to report the error to your error
-    // reporting service, for example Sentry
-    console.warn(error);
-  };
-
   _handleFinishLoading = () => {
     this.setState({ isLoadingComplete: true });
   };
@@ -51,6 +45,5 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    /* backgroundColor: '#fff', */
   },
 });

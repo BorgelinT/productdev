@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet, ImageBackground} from 'react-native';
+import { Text, StyleSheet, ImageBackground, StatusBar} from 'react-native';
+import { Constants } from 'expo';
 
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
     headerStyle: {
+      marginTop: StatusBar.currentHeight , //jättää statuspalkin pituuden verran tilaa yläreunaan, jotta logo ei jää sen alle
       backgroundColor: '#FA8072',
     },
     headerTitleStyle: {
@@ -18,10 +20,10 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-    <ImageBackground source={require('../assets/images/kaitsenbackground.png')} style={styles.container}>
-      <Text style={styles.text}>Thank you for downloading Kaitsen</Text> 
-      <Text style={styles.text}>Open notes to get started</Text>
-    </ImageBackground>
+        <ImageBackground source={require('../assets/images/kaitsenbackground.png')} style={styles.container}>
+          <Text style={styles.text}>Thank you for downloading Kaitsen</Text> 
+          <Text style={styles.text}>Open notes to get started</Text>
+        </ImageBackground>
     );
   }
 }
@@ -29,7 +31,9 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
   },
   text: {
     textAlign: 'center',

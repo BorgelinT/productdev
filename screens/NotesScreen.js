@@ -26,6 +26,7 @@ export default class NotesScreen extends React.Component {
   static navigationOptions = {
     title: 'Notes',
     headerStyle: {
+      marginTop: StatusBar.currentHeight , //jättää statuspalkin pituuden verran tilaa yläreunaan, jotta logo ei jää sen alle
       backgroundColor: '#FA8072',
     },
     headerTitleStyle: {
@@ -35,6 +36,13 @@ export default class NotesScreen extends React.Component {
       color: '#fffff0'
     },
   };
+  state = {
+    inputValue: '',
+    loadingItems: false,
+    allItems: {},
+    isCompleted: false
+  };
+  
 
   componentDidMount = () => {
     this.loadingItems();
